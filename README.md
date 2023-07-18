@@ -6,8 +6,8 @@
 ## Table of contents
 * [Introduction](#introduction)
 * [About Dataset](#about-dataset)
-* [Link to Code](#link-to-code)
 * [Methodology](#methodology)
+* [Link to Code](#link-to-code)
 * [Acknowledgements](#acknowledgements)
 
 <hr>
@@ -24,12 +24,17 @@ The dataset is of 100 *.csv files, each containing earthquake (i.e., ground vibr
 
 The link to the data can be found [here](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/datasource).
 
+## Methodology
+Ground virbation data although can be considered as a Time Seriese signal, but still doesn't follow a traditional time series analysis such as trend, seasonality. Earthquake data analysis mainly follows techniques of Digital Signal Processing. Earthquake data mainly contains three components which are Radial, Transverse and Vertical the combination of which provides seismologists a three dimensional view of the signals behaviour. In this project, I mainly decided to analyze the Vertical signal as the vertical channel captures more or less all type of earthquake waves (Primary, Secondary and Surface waves) [[1]](1.). 
+
+
 ## Link to Code
 The methodology followed in this proejct has been discussed in the next section in detail. One can access the notebook through the following link.
 
 **Link to Notebook**: [Seismic_Data_Analysis.ipynb](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/Seismic_Data_Analysis.ipynb)
 
-
+## References
+1. https://www.youtube.com/watch?v=Za_22xo7ZQQ&ab_channel=IRISEarthquakeScience
 
 
 
