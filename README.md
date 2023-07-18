@@ -1,2 +1,7 @@
-# Earthquake_Data_Analysis
-This repository contains unsupervised analysis of earthquake data using Kmeans and Deep Embedded Clustering to identify different types of signals captured in Seismogram.
+<div align="center">
+<img src="https://raw.githubusercontent.com/skswar/Scratch_MachineLearning_Models/master/img/banner" alt="Earthquake Data Analysis Intro Logo"/>
+</div>
+<br/>
+<h3 align="center">Analyzing NE68 Seismic Tremors using Unsupervised Machine learning and Deep Learning Techniques and Identifying Different Singal Patterns</h3>
+<br/>
+
