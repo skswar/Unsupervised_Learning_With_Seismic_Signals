@@ -25,8 +25,22 @@ The dataset is of 100 *.csv files, each containing earthquake (i.e., ground vibr
 The link to the data can be found [here](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/datasource).
 
 ## Methodology
-Ground virbation data although can be considered as a Time Seriese signal, but still doesn't follow a traditional time series analysis such as trend, seasonality. Earthquake data analysis mainly follows techniques of Digital Signal Processing. Earthquake data mainly contains three components which are Radial, Transverse and Vertical the combination of which provides seismologists a three dimensional view of the signals behaviour. In this project, I mainly decided to analyze the Vertical signal as the vertical channel captures more or less all type of earthquake waves (Primary, Secondary and Surface waves) [[1]](1.). 
+Ground virbation data although can be considered as a Time Seriese signal, but still doesn't follow a traditional time series analysis such as trend, seasonality. Earthquake data analysis mainly follows techniques of Digital Signal Processing. Earthquake data mainly contains three components which are Radial, Transverse and Vertical the combination of which provides seismologists a three dimensional view of the signals behaviour. In this project, I mainly decided to analyze the Vertical signal as the vertical channel captures more or less all type of earthquake waves (Primary, Secondary and Surface waves) [1], therefore I decided to select the vertical channel data and perform all analysis on this component. 
 
+### Understanding Signal Properties
+As per Signal processing techniques, to analyze any given signal or wave, it is important to convert the singal into its frequency domain and find out the signal strength in different frequency. This helps us understand the dominant frequencies present in the signal and their amplitude range. It was given in the dataset description, the first 120 seconds of the data can be considered as pre earthquake noise and rest as legitimate signal. Therefore I divded the signal in two halves, performed Fast Fourier Transform (FFT) and analyzed the frequency level for both noise and signal. As per the below box plot we can clearly see that noise part of the signal has much higher frequency range than the other part of the signal.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/skswar/Seismic_Signal_Analysis/master/img/eq1.png" width="45%"/>
+</p>
+
+Every signal and peaks and valleys, and peaks denotes the strenght of the signal. Thus to derive more properties of the signal, I calculated the top 5 peaks for both noise and earthquake component. This helped me find at what frequency range, and amplitude range this peaks are occuring.  The follwing left images shows, how the frequecy varies at different peaks for both noise and singal component. The right image shows how the amplitude varies for the same. These properties of the singal will later help us to define critical features to feed in the machine learning algorithm. 
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/skswar/Seismic_Signal_Analysis/master/img/eq2.png" width="50%"/>
+<img src="https://raw.githubusercontent.com/skswar/Seismic_Signal_Analysis/master/img/eq3.png" width="50%"/>
+It is evident that noise has a higher frequency and lower amplitde distribution than the signal at different peaks
+</p>
 
 ## Link to Code
 The methodology followed in this proejct has been discussed in the next section in detail. One can access the notebook through the following link.
@@ -34,7 +48,7 @@ The methodology followed in this proejct has been discussed in the next section 
 **Link to Notebook**: [Seismic_Data_Analysis.ipynb](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/Seismic_Data_Analysis.ipynb)
 
 ## References
-1. https://www.youtube.com/watch?v=Za_22xo7ZQQ&ab_channel=IRISEarthquakeScience
+1. [IRIS Earthquake Science, 3-component Seismograms—Capturing the motion of an earthquake](https://www.youtube.com/watch?v=Za_22xo7ZQQ&ab_channel=IRISEarthquakeScience)
 
 
 
