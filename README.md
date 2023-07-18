@@ -6,6 +6,7 @@
 ## Table of contents
 * [Introduction](#introduction)
 * [About Dataset](#about-dataset)
+* [Link to Code](#link-to-code)
 * [Methodology](#methodology)
 * [Acknowledgements](#acknowledgements)
 
@@ -23,8 +24,8 @@ The dataset is of 100 *.csv files, each containing earthquake (i.e., ground vibr
 
 The link to the data can be found [here](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/datasource).
 
-## Link to Notebook
-The methodology followed has been discussed in the following section in detail. One can access the notebook through the following link.
+## Link to Code
+The methodology followed in this proejct has been discussed in the next section in detail. One can access the notebook through the following link.
 
 **Link to Notebook**: [Seismic_Data_Analysis.ipynb](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/Seismic_Data_Analysis.ipynb)
 
