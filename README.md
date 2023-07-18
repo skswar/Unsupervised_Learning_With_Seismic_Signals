@@ -37,8 +37,8 @@ As per Signal processing techniques, to analyze any given signal or wave, it is 
 Every signal and peaks and valleys, and peaks denotes the strenght of the signal. Thus to derive more properties of the signal, I calculated the top 5 peaks for both noise and earthquake component. This helped me find at what frequency range, and amplitude range this peaks are occuring.  The follwing left images shows, how the frequecy varies at different peaks for both noise and singal component. The right image shows how the amplitude varies for the same. These properties of the singal will later help us to define critical features to feed in the machine learning algorithm. 
 
 <p align="center">
-<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq2.png" width="40%"/>
-<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq3.png" width="40%"/>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq2.png" width="45%"/>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq3.png" width="45%"/>
 <p align="center">It is evident that noise has a higher frequency and lower amplitde distribution than the signal at different peaks</p>
 </p>
 
