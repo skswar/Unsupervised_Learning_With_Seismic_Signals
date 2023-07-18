@@ -27,8 +27,8 @@ The link to the data can be found [here](https://github.com/skswar/Seismic_Signa
 ## Methodology
 Ground virbation data although can be considered as a Time Seriese signal, but still doesn't follow a traditional time series analysis such as trend, seasonality. Earthquake data analysis mainly follows techniques of Digital Signal Processing. Earthquake data mainly contains three components which are Radial, Transverse and Vertical the combination of which provides seismologists a three dimensional view of the signals behaviour. In this project, I mainly decided to analyze the Vertical signal as the vertical channel captures more or less all type of earthquake waves (Primary, Secondary and Surface waves) [1], therefore I decided to select the vertical channel data and perform all analysis on this component. 
 
-### Understanding Signal Properties
-As per Signal processing techniques, to analyze any given signal or wave, it is important to convert the singal into its frequency domain and find out the signal strength in different frequency. This helps us understand the dominant frequencies present in the signal and their amplitude range. It was given in the dataset description, the first 120 seconds of the data can be considered as pre earthquake noise and rest as legitimate signal. Therefore I divded the signal in two halves, performed Fast Fourier Transform (FFT) and analyzed the frequency level for both noise and signal. As per the below box plot we can clearly see that noise part of the signal has much higher frequency range than the other part of the signal.
+### Understanding Signal Properties with FFT
+As per Signal processing techniques, to analyze any given signal or wave, it is important to convert the singal into its frequency domain and find out the signal strength in different frequency. This is acheived through Fast Fourier Transform (FFT) helps us understand the dominant frequencies present in the signal and their amplitude range. It was given in the dataset description, the first 120 seconds of the data can be considered as pre earthquake noise and rest as legitimate signal. Therefore I divded the signal in two halves, performed Fast Fourier Transform (FFT) and analyzed the frequency level for both noise and signal. As per the below box plot we can clearly see that noise part of the signal has much higher frequency range than the other part of the signal.
 
 <p align="center">
 <img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq1.png" width="45%"/>
@@ -41,6 +41,17 @@ Every signal and peaks and valleys, and peaks denotes the strenght of the signal
 <img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq3.png" width="45%"/>
 <p align="center">It is evident that noise has a higher frequency and lower amplitde distribution than the signal at different peaks</p>
 </p>
+
+### Understanding Signal Properties with PSD
+Another important Singal analysis technique is Power Spectral Density (PSD). Unlike FFT, this method provides the strength of various frequecny values across signal. Just like above step, I calculated the PSD of noise and signal separately. The following images show the PSD range for noise and singal component.
+
+<p align="center">
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq4.png" width="35%"/>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq5.png" width="60%"/>
+<p align="center">Clearly signal has a higher PSD than noise as shown in the left image. As per right image we can see that at peak 1 we have the highest range of PSD values and that is becuase the earthquake singal is likely to have the highest power during the first peak</p>
+</p>
+
+
 
 ## Link to Code
 The methodology followed in this proejct has been discussed in the next section in detail. One can access the notebook through the following link.
