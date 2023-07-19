@@ -9,8 +9,11 @@
 * [Methodology](#methodology)
   * [Deriving Signal Properties with FFT](#deriving-signal-properties-with-fft)
   * [Deriving Signal Properties with PSD](#deriving-signal-properties-with-psd)
+  * [Applying KMeans Clustering Algorithm](#applying-kmeans-clustering-algorithm)
+  * [Applying Deep Embedded Clustering (DEC) Neural Network Algorithm](#applying-deep-embedded-clustering-neural-network-algorithm)
 * [Link to Code](#link-to-code)
 * [Acknowledgements](#acknowledgements)
+* [References](#references)
 
 <hr>
 
@@ -74,21 +77,23 @@ The follwing image provided us the result of the clustering algorithm. With visu
 <img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq8.png" width="80%"/>
 </p>
 
-### Applying Deep Embedded Clustering (DEC) Neural NetowrkAlgorithm
-Another very common method of analyzing singlas are through spectogram. In simple terms, spectograms are heatmap like images that shows the signal power at different points of time. This images can be fed into a neural network algorithm which uses the auto encoder and decoder technique  to cluster the signals. The DEC algorithm was originally developed by Junyuan Xie, Ross Girshick & Ali Farhadi. In this project, I try to reproduce the algorithm and use it for this earthquake signal analysis. Individual steps for this method has been explained in the notebook. With number of experiements, I decided to choose 9 clusters. From the output of the DEC algorithm it was seen, signals were fairly distributed equally among each cluster. The following image produces three signals from each cluster. From visual inspection we can confirm that signals in different clusters are different and signals belonging to the same cluster has similar appearance charecteristics. As mentioned earlier, the frequency/psd profile of every cluster can be analyzed further to receive more numerically verifiable information.
+### Applying Deep Embedded Clustering Neural Network Algorithm
+Another very common method of analyzing singlas are through spectogram. In simple terms, spectograms are heatmap like images that shows the signal power at different points of time. This images can be fed into a neural network algorithm (DEC) which uses the auto encoder and decoder technique  to cluster the signals. The DEC algorithm [2] was originally developed by Junyuan Xie, Ross Girshick & Ali Farhadi. In this project, I try to reproduce the algorithm and use it for this earthquake signal analysis. Individual steps for this method has been explained in the notebook. With number of experiements, I decided to choose 9 clusters. From the output of the DEC algorithm it was seen, signals were fairly distributed equally among each cluster. The following image produces three signals from each cluster. From visual inspection we can confirm that signals in different clusters are different and signals belonging to the same cluster has similar appearance charecteristics. As mentioned earlier, the frequency/psd profile of every cluster can be analyzed further to receive more numerically verifiable information.
 <p align="center">
 <img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq9.png" width="80%"/>
 </p>
 
-
 ## Link to Code
 The methodology followed in this proejct has been discussed in the next section in detail. One can access the notebook through the following link.
 
-**Link to Notebook**: [Seismic_Data_Analysis.ipynb](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/Seismic_Data_Analysis.ipynb)
+**Link to Notebook**: [Seismic_Data_Analysis.ipynb](https://github.com/skswar/Seismic_Signal_Analysis/blob/main/python_script/Seismic_Data_Analysis.ipynb)
+
+## Acknowledgements
+I would like to thank the [URSeismo](http://www.sas.rochester.edu/ees/urseismo/) lab at the University of Rochester for giving me the opportunity to work on this open ended data analysis project and allowing me to furnish my findings.
 
 ## References
 1. [IRIS Earthquake Science, 3-component Seismograms—Capturing the motion of an earthquake](https://www.youtube.com/watch?v=Za_22xo7ZQQ&ab_channel=IRISEarthquakeScience)
-
+2. [Deep Embedded Clustering Paper](https://arxiv.org/pdf/1511.06335.pdf)
 
 
 
