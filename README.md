@@ -43,12 +43,12 @@ Every signal and peaks and valleys, and peaks denotes the strenght of the signal
 </p>
 
 ### Understanding Signal Properties with PSD
-Another important Singal analysis technique is Power Spectral Density (PSD). Unlike FFT, this method provides the strength of various frequecny values across signal. Just like above step, I calculated the PSD of noise and signal separately. The following images show the PSD range for noise and singal component.
+Another important Singal analysis technique is Power Spectral Density (PSD). Unlike FFT, this method provides the strength of various frequecny values across signal. Just like above step, I calculated the PSD of noise and signal separately. The following images show the PSD range for noise and singal component. In the right image, I have kept peak one out from the graph as the value was too high to fit in.
 
 <p align="center">
-<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq4.png" width="35%"/>
-<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq5.png" width="60%"/>
-<p align="center">Clearly signal has a higher PSD than noise as shown in the left image. As per right image we can see that at peak 1 we have the highest range of PSD values and that is becuase the earthquake singal is likely to have the highest power during the first peak</p>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq4.png" width="35%" height="250px"/>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq5.png" width="60%" height="250px"/>
+<p align="center">Clearly signal has a higher PSD than noise as shown in the left image. In right image we can see at peak 2 we have the highest range of PSD values and that is becuase the earthquake singal is likely to have the highest power during the first/second peak</p>
 </p>
 
 
