@@ -6,11 +6,12 @@
 ## Table of contents
 * [Introduction](#introduction)
 * [About Dataset](#about-dataset)
-* [Methodology](#methodology)
+* [Methodology & Results](#methodology-and-results)
   * [Deriving Signal Properties with FFT](#deriving-signal-properties-with-fft)
   * [Deriving Signal Properties with PSD](#deriving-signal-properties-with-psd)
   * [Applying KMeans Clustering Algorithm](#applying-kmeans-clustering-algorithm)
   * [Applying Deep Embedded Clustering (DEC) Neural Network Algorithm](#applying-deep-embedded-clustering-neural-network-algorithm)
+* [Conclusion](#conclusion)
 * [Link to Code](#link-to-code)
 * [Acknowledgements](#acknowledgements)
 * [References](#references)
@@ -29,7 +30,7 @@ The dataset is of 100 *.csv files, each containing earthquake (i.e., ground vibr
 
 The link to the data can be found [here](https://github.com/skswar/Seismic_Signal_Analysis/tree/main/datasource).
 
-## Methodology
+## Methodology and Results
 Ground virbation data although can be considered as a Time Seriese signal, but still doesn't follow a traditional time series analysis such as trend, seasonality. Earthquake data analysis mainly follows techniques of Digital Signal Processing. Earthquake data mainly contains three components which are Radial, Transverse and Vertical the combination of which provides seismologists a three dimensional view of the signals behaviour. In this project, I mainly decided to analyze the Vertical signal as the vertical channel captures more or less all type of earthquake waves (Primary, Secondary and Surface waves) [1], therefore I decided to select the vertical channel data and perform all analysis on this component. 
 
 ### Deriving Signal Properties with FFT
@@ -80,8 +81,14 @@ The follwing image provided us the result of the clustering algorithm. With visu
 ### Applying Deep Embedded Clustering Neural Network Algorithm
 Another very common method of analyzing singlas are through spectogram. In simple terms, spectograms are heatmap like images that shows the signal power at different points of time. This images can be fed into a neural network algorithm (DEC) which uses the auto encoder and decoder technique  to cluster the signals. The DEC algorithm [2] was originally developed by Junyuan Xie, Ross Girshick & Ali Farhadi. In this project, I try to reproduce the algorithm and use it for this earthquake signal analysis. Individual steps for this method has been explained in the notebook. With number of experiements, I decided to choose 9 clusters. From the output of the DEC algorithm it was seen, signals were fairly distributed equally among each cluster. The following image produces three signals from each cluster. From visual inspection we can confirm that signals in different clusters are different and signals belonging to the same cluster has similar appearance charecteristics. As mentioned earlier, the frequency/psd profile of every cluster can be analyzed further to receive more numerically verifiable information.
 <p align="center">
-<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq9.png" width="80%"/>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq9.png" width="90%"/>
 </p>
+
+## Conclusion
+Unsupervised learning methods are valuable tools when it comes to partitioning data into multiple groups, enabling us to focus our in-depth analysis on specific clusters. In this study, Deep Embedded Clustering outperformed Kmeans in identifying more refined groups of seismic signals. The analysis and clustering of these signals provide valuable insights to the research community, shedding light on the diverse types of seismic activity recorded at specific stations.
+
+By incorporating additional data, such as the time of signal recording, it becomes possible to analyze the temporal patterns of each cluster, revealing potential correlations between ground vibrational activities and specific time frames. Thus to conclude, Data Science opens up limitless possibilities, enabling us to gain a deeper understanding of complex phenomena and unlocking new avenues for research and analysis.
+
 
 ## Link to Code
 The methodology followed in this proejct has been discussed in the next section in detail. One can access the notebook through the following link.
