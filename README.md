@@ -7,6 +7,8 @@
 * [Introduction](#introduction)
 * [About Dataset](#about-dataset)
 * [Methodology](#methodology)
+  * [Deriving Signal Properties with FFT](#deriving-signal-properties-with-fft)
+  * [Deriving Signal Properties with PSD](#deriving-signal-properties-with-psd)
 * [Link to Code](#link-to-code)
 * [Acknowledgements](#acknowledgements)
 
@@ -27,7 +29,7 @@ The link to the data can be found [here](https://github.com/skswar/Seismic_Signa
 ## Methodology
 Ground virbation data although can be considered as a Time Seriese signal, but still doesn't follow a traditional time series analysis such as trend, seasonality. Earthquake data analysis mainly follows techniques of Digital Signal Processing. Earthquake data mainly contains three components which are Radial, Transverse and Vertical the combination of which provides seismologists a three dimensional view of the signals behaviour. In this project, I mainly decided to analyze the Vertical signal as the vertical channel captures more or less all type of earthquake waves (Primary, Secondary and Surface waves) [1], therefore I decided to select the vertical channel data and perform all analysis on this component. 
 
-### Understanding Signal Properties with FFT
+### Deriving Signal Properties with FFT
 As per Signal processing techniques, to analyze any given signal or wave, it is important to convert the singal into its frequency domain and find out the signal strength in different frequency. This is acheived through Fast Fourier Transform (FFT) helps us understand the dominant frequencies present in the signal and their amplitude range. It was given in the dataset description, the first 120 seconds of the data can be considered as pre earthquake noise and rest as legitimate signal. Therefore I divded the signal in two halves, performed Fast Fourier Transform (FFT) and analyzed the frequency level for both noise and signal. As per the below box plot we can clearly see that noise part of the signal has much higher frequency range than the other part of the signal.
 
 <p align="center">
@@ -42,7 +44,7 @@ Every signal and peaks and valleys, and peaks denotes the strenght of the signal
 <p align="center">It is evident that noise has a higher frequency and lower amplitde distribution than the signal at different peaks</p>
 </p>
 
-### Understanding Signal Properties with PSD
+### Deriving Signal Properties with PSD
 Another important Singal analysis technique is Power Spectral Density (PSD). Unlike FFT, this method provides the strength of various frequecny values across signal. Just like above step, I calculated the PSD of noise and signal separately. The following images show the PSD range for noise and singal component. In the right image, I have kept peak one out from the graph as the value was too high to fit in.
 
 <p align="center">
