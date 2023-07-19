@@ -71,13 +71,13 @@ Next, employing the Elbow method, the number of clusters is determined to be 4 f
 
 The follwing image provided us the result of the clustering algorithm. With visual inspection we can infer that in Cluster 2 at last, singals are mostly looking like a sinusoidal wave throughout and possible indicates noisy signals. Whereas other clusters has signals which resembels a possible earthquake. The information related to frequency and PSD profile can now be plotted and further analyzed to understand signal chaectarestics of each clsuters.
 <p align="center">
-<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq8.png" width="40%"/>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq8.png" width="80%"/>
 </p>
 
 ### Applying Deep Embedded Clustering (DEC) Neural NetowrkAlgorithm
 Another very common method of analyzing singlas are through spectogram. In simple terms, spectograms are heatmap like images that shows the signal power at different points of time. This images can be fed into a neural network algorithm which uses the auto encoder and decoder technique  to cluster the signals. The DEC algorithm was originally developed by Junyuan Xie, Ross Girshick & Ali Farhadi. In this project, I try to reproduce the algorithm and use it for this earthquake signal analysis. Individual steps for this method has been explained in the notebook. With number of experiements, I decided to choose 9 clusters. From the output of the DEC algorithm it was seen, signals were fairly distributed equally among each cluster. The following image produces three signals from each cluster. From visual inspection we can confirm that signals in different clusters are different and signals belonging to the same cluster has similar appearance charecteristics. As mentioned earlier, the frequency/psd profile of every cluster can be analyzed further to receive more numerically verifiable information.
 <p align="center">
-<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq9.png" width="40%"/>
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq9.png" width="80%"/>
 </p>
 
 
