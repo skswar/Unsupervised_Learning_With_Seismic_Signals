@@ -53,6 +53,32 @@ Another important Singal analysis technique is Power Spectral Density (PSD). Unl
 <p align="center">Clearly signal has a higher PSD than noise as shown in the left image. In right image we can see at peak 2 we have the highest range of PSD values and that is becuase the earthquake singal is likely to have the highest power during the first/second peak</p>
 </p>
 
+### Applying KMeans Clustering Algorithm
+With all the features derived from the previous two steps, we can now look at these signals and try to figure out if there is any particular group of signals that belong together. This way it can be aimed to identify signals which are purely noise but look like earthquake data, ground vibration signals generating from human activity such as mining or actual earthquake data. 
+
+Before applying any unsupervised machine learning, I calculated the following crrelation matrix. It was found that these features do not correlate much and thus can be used as a reliable predictor variables. In following image we can see that negative correlation is only upto -0.2 which is not strong, and there are very few cases where a strong correaltion (~0.8) occurs. As majority of the features were un correlated thus I decided to use all the features for the following step.
+
+<p align="center">
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq6.png" width="60%"/>
+</p>
+
+The box plots depicted above reveal the presence of outlier cases located at the extremities of the whiskers. Since we are working with signals, it is plausible that these outlier signals may contain valuable information. Consequently, instead of discarding these cases, I applied a standardization process to normalize the data thus reducing the algorithm's sensitivity to outliers.
+
+Next, employing the Elbow method, the number of clusters is determined to be 4 for the implementation of the Kmeans algorithm. This selection allows for an optimal partitioning of the data into distinct groups based on their similarities, facilitating further analysis and interpretation.
+<p align="center">
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq7.png" width="40%"/>
+</p>
+
+The follwing image provided us the result of the clustering algorithm. With visual inspection we can infer that in Cluster 2 at last, singals are mostly looking like a sinusoidal wave throughout and possible indicates noisy signals. Whereas other clusters has signals which resembels a possible earthquake. The information related to frequency and PSD profile can now be plotted and further analyzed to understand signal chaectarestics of each clsuters.
+<p align="center">
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq8.png" width="40%"/>
+</p>
+
+### Applying Deep Embedded Clustering (DEC) Neural NetowrkAlgorithm
+Another very common method of analyzing singlas are through spectogram. In simple terms, spectograms are heatmap like images that shows the signal power at different points of time. This images can be fed into a neural network algorithm which uses the auto encoder and decoder technique  to cluster the signals. The DEC algorithm was originally developed by Junyuan Xie, Ross Girshick & Ali Farhadi. In this project, I try to reproduce the algorithm and use it for this earthquake signal analysis. Individual steps for this method has been explained in the notebook. With number of experiements, I decided to choose 9 clusters. From the output of the DEC algorithm it was seen, signals were fairly distributed equally among each cluster. The following image produces three signals from each cluster. From visual inspection we can confirm that signals in different clusters are different and signals belonging to the same cluster has similar appearance charecteristics. As mentioned earlier, the frequency/psd profile of every cluster can be analyzed further to receive more numerically verifiable information.
+<p align="center">
+<img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/eq9.png" width="40%"/>
+</p>
 
 
 ## Link to Code
