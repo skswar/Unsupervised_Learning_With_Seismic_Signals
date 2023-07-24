@@ -2,6 +2,7 @@
 <img src="https://github.com/skswar/Seismic_Signal_Analysis/blob/main/img/banner.png" alt="Seismic Data Analysis Intro Logo" height="250px" width="80%"/>
 </div>
 <h3 align="center">Analyzing NE68 Seismic Tremors using Unsupervised Machine learning and Unsupervised Deep Learning Techniques (DEC) and Identifying Different Signal Patterns</h3>
+<hr>
 
 ## Table of contents
 * [Introduction](#introduction)
